@@ -59,12 +59,12 @@ const Navbar = ({ handleOrderPopup }) => {
         <div className="container flex justify-between items-center">
           {/* Logo and Links section */}
           <div className="flex items-center gap-4">
-            <a href="#" className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl">Eshop</a>
+            <a href="/home" className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl">Eshop</a>
             {/* Menu Items */}
             <div className="hidden lg:block">
               <ul className="flex items-center gap-8 ml-8">
                 <li className="nav-item">
-                  <NavLink activeclassname="menu_active" exact className="nav-link" aria-current="page" to="/">Home</NavLink>
+                  <NavLink activeclassname="menu_active" exact className="nav-link" aria-current="page" to="/home">Home</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink activeclassname="menu_active" className="nav-link" to="/Shop">Shop</NavLink>
@@ -75,6 +75,11 @@ const Navbar = ({ handleOrderPopup }) => {
                 <li className="nav-item">
                   <NavLink activeclassname="menu_active" className="nav-link" to="/contact">Contact</NavLink>
                 </li>
+                
+                <li className="nav-item">
+                <NavLink activeclassname="menu_active" className="nav-link" to="/signIn">Sign In</NavLink>
+              </li>
+              
 
               </ul>
             </div>
@@ -99,7 +104,7 @@ const Navbar = ({ handleOrderPopup }) => {
            
           >
             <BiCart size="2rem"/>
-            {!isEmpty && <span className="relative left-[-21px] top-[-18px]">{totalItems}</span>}
+            {!isEmpty && <span className=" border-gray-950 dark:border-white border-2 rounded-full  place-items-center absolute h-6 w-6 left-[1395px] top-[4px] text-center text-black dark:text-white group-hover:text-primary">{totalItems}</span>}
             <span className={isEmpty ? "" : "ml-[-13px]"}>&nbsp;Cart</span>
           </Link>
          
